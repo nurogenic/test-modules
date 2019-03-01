@@ -13,6 +13,10 @@ function renderReact(){
     ReactDOM.render(React.createElement.apply(React, args), element)
 }
 
+function destroyReact(elem){
+    ReactDOM.unmountComponentAtNode(elem)
+}
+
 function renderAngular(){
     // Add angular render here
 }
@@ -23,5 +27,6 @@ function renderAngular(){
  */
 window.global = window.global || {}
 window.global.renderReact = renderReact
+window.global.destroyReact = destroyReact
 window.global.renderAngular = renderAngular
 export { renderReact, renderAngular }

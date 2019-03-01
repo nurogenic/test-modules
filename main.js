@@ -1,5 +1,5 @@
 (function(){
-    "use strict";
+    "use strict"
 
     /**
      * This file represents any of the JS files we have in either the admin
@@ -7,16 +7,21 @@
      * that it needs to render. This file would represent the controller.
      */
 
-    var elements = document.querySelectorAll('a');
-    elements.forEach(element => {
+    document.querySelectorAll('a').forEach(element => {
         element.addEventListener('click', evt => {
-            
+            var rootElem = document.getElementById('root')
+
+            /**
+             * Clear the root element.
+             */
+            window.global.destroyReact(rootElem)
+
             /**
              * Create an instance of our model
              */
             var model = new window.global.TestModule.Model({
                 text: 'Start Text'
-            });
+            })
 
             /**
              * Renders the view
@@ -27,7 +32,7 @@
                 // Data (props) to be added to the view
                 { model },
                 // Place where component will render.
-                document.getElementById('root')
+                rootElem
             )
         })
     })
