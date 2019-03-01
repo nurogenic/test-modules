@@ -14,7 +14,7 @@
             /**
              * Create an instance of our model
              */
-            var model = new window.global.TestClass.Model({
+            var model = new window.global.TestModule.Model({
                 text: 'Start Text'
             });
 
@@ -23,7 +23,7 @@
              */
             window.global.render(
                 // View to render
-                window.global.TestClass.View,
+                window.global.TestModule.View,
                 // Data (props) to be added to the view
                 { model },
                 // Place where component will render.
