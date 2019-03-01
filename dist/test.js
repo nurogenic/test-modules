@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./test/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/test-module/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -146,51 +146,51 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
-/***/ "./test/index.js":
-/*!***********************!*\
-  !*** ./test/index.js ***!
-  \***********************/
+/***/ "./src/test-module/index.js":
+/*!**********************************!*\
+  !*** ./src/test-module/index.js ***!
+  \**********************************/
 /*! exports provided: View, Model */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./view */ \"./test/view.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"View\", function() { return _view__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model */ \"./test/model.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Model\", function() { return _model__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n\n\nwindow.global = window.global || {};\nwindow.global.TestClass = {\n  View: _view__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  Model: _model__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n};\n\n\n//# sourceURL=webpack:///./test/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./view */ \"./src/test-module/view.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"View\", function() { return _view__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model */ \"./src/test-module/model.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Model\", function() { return _model__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n\n\n/* We would need to add to the global scope as we do now with window.pix */\n\nwindow.global = window.global || {};\nwindow.global.TestModule = {\n  View: _view__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  Model: _model__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n};\n\n\n//# sourceURL=webpack:///./src/test-module/index.js?");
 
 /***/ }),
 
-/***/ "./test/model.js":
-/*!***********************!*\
-  !*** ./test/model.js ***!
-  \***********************/
+/***/ "./src/test-module/model.js":
+/*!**********************************!*\
+  !*** ./src/test-module/model.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Model =\n/*#__PURE__*/\nfunction () {\n  function Model(data) {\n    _classCallCheck(this, Model);\n\n    this._data = data;\n  }\n\n  _createClass(Model, [{\n    key: \"setProp\",\n    value: function setProp(key, value) {\n      this._data[key] = value;\n      return this;\n    }\n  }, {\n    key: \"getProp\",\n    value: function getProp(key) {\n      return key ? this._data[key] : this._data;\n    }\n  }]);\n\n  return Model;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Model);\n\n//# sourceURL=webpack:///./test/model.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n/**\n * Normal Data model. Can extend from PixModel\n */\nvar Model =\n/*#__PURE__*/\nfunction () {\n  function Model(data) {\n    _classCallCheck(this, Model);\n\n    this._data = data;\n  }\n\n  _createClass(Model, [{\n    key: \"setProp\",\n    value: function setProp(key, value) {\n      this._data[key] = value;\n      return this;\n    }\n  }, {\n    key: \"getProp\",\n    value: function getProp(key) {\n      return key ? this._data[key] : this._data;\n    }\n  }]);\n\n  return Model;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Model);\n\n//# sourceURL=webpack:///./src/test-module/model.js?");
 
 /***/ }),
 
-/***/ "./test/style.js":
-/*!***********************!*\
-  !*** ./test/style.js ***!
-  \***********************/
+/***/ "./src/test-module/style.js":
+/*!**********************************!*\
+  !*** ./src/test-module/style.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar style = {\n  padding: 20,\n  background: '#ccc',\n  color: '#000'\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (style);\n\n//# sourceURL=webpack:///./test/style.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/**\n * Styles as data allow us to be more selective with how things render.\n * We can extend from other style objects instead of dealing with class names.\n */\nvar style = {\n  padding: 20,\n  background: '#ccc',\n  color: '#000'\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (style);\n\n//# sourceURL=webpack:///./src/test-module/style.js?");
 
 /***/ }),
 
-/***/ "./test/view.js":
-/*!**********************!*\
-  !*** ./test/view.js ***!
-  \**********************/
+/***/ "./src/test-module/view.js":
+/*!*********************************!*\
+  !*** ./src/test-module/view.js ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style */ \"./test/style.js\");\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n\nvar View =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(View, _Component);\n\n  function View(props) {\n    var _this;\n\n    _classCallCheck(this, View);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(View).call(this, props));\n    _this.state = {\n      count: 1\n    };\n    return _this;\n  }\n\n  _createClass(View, [{\n    key: \"click\",\n    value: function click() {\n      this.setState({\n        count: this.state.count + 1\n      });\n      this.props.model.setProp('text', \"Updated \".concat(this.state.count, \" Times\"));\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        style: _style__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n        onClick: this.click.bind(this)\n      }, this.props.model.getProp('text'));\n    }\n  }]);\n\n  return View;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (View);\n\n//# sourceURL=webpack:///./test/view.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style */ \"./src/test-module/style.js\");\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n/**\n * View can be React/Angular/Vue\n * This is the only place the module will reference a library.\n * If need be this file can be different from the admin/storefront so the models are the same.\n */\n\nvar View =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(View, _Component);\n\n  function View(props) {\n    var _this;\n\n    _classCallCheck(this, View);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(View).call(this, props));\n    _this.state = {\n      count: 1\n    };\n    return _this;\n  }\n\n  _createClass(View, [{\n    key: \"click\",\n    value: function click() {\n      this.setState({\n        count: this.state.count + 1\n      });\n      this.props.model.setProp('text', \"Updated \".concat(this.state.count, \" Times\"));\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        style: _style__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n        onClick: this.click.bind(this)\n      }, this.props.model.getProp('text'));\n    }\n  }]);\n\n  return View;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (View);\n\n//# sourceURL=webpack:///./src/test-module/view.js?");
 
 /***/ })
 

@@ -21,7 +21,7 @@
             /**
              * Renders the view
              */
-            window.global.render(
+            window.global.renderReact(
                 // View to render
                 window.global.TestModule.View,
                 // Data (props) to be added to the view

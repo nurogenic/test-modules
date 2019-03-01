@@ -12,7 +12,7 @@ class Model {
     }
 
     getProp(key) {
-        return key ? this._data[key] : this._data;
+        return key ? this._data[key] : this._data
     }
 }
 

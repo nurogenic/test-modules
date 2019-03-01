@@ -7,10 +7,14 @@ import ReactDOM from 'react-dom'
  * @param {Object} data This will be the data in the view.
  * @param {HTMLElement} element This will be where the component renders. 
  */
-const render = function(){
+function renderReact(){
     var args = Array.prototype.slice.call(arguments)
     var element = args.pop()
     ReactDOM.render(React.createElement.apply(React, args), element)
+}
+
+function renderAngular(){
+    // Add angular render here
 }
 
 /**
@@ -18,5 +22,6 @@ const render = function(){
  * in non-single page applications.
  */
 window.global = window.global || {}
-window.global.render = render
-export { render }
+window.global.renderReact = renderReact
+window.global.renderAngular = renderAngular
+export { renderReact, renderAngular }

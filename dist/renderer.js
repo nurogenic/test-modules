@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./renderer.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/renderer.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -229,15 +229,15 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-/***/ "./renderer.js":
-/*!*********************!*\
-  !*** ./renderer.js ***!
-  \*********************/
-/*! exports provided: render */
+/***/ "./src/renderer.js":
+/*!*************************!*\
+  !*** ./src/renderer.js ***!
+  \*************************/
+/*! exports provided: renderReact, renderAngular */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar render = function render() {\n  var args = Array.prototype.slice.call(arguments);\n  var element = args.pop();\n  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement.apply(react__WEBPACK_IMPORTED_MODULE_0___default.a, args), element);\n};\n\nwindow.global = window.global || {};\nwindow.global.render = render;\n\n\n//# sourceURL=webpack:///./renderer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"renderReact\", function() { return renderReact; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"renderAngular\", function() { return renderAngular; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\n/**\n * Render a React View.\n * @param {ReactComponent} view This needs to be a react view.\n * @param {Object} data This will be the data in the view.\n * @param {HTMLElement} element This will be where the component renders. \n */\n\nfunction renderReact() {\n  var args = Array.prototype.slice.call(arguments);\n  var element = args.pop();\n  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement.apply(react__WEBPACK_IMPORTED_MODULE_0___default.a, args), element);\n}\n\nfunction renderAngular() {} // Add angular render here\n\n/**\n * This exposes the renderer on the global scope to allow us to render\n * in non-single page applications.\n */\n\n\nwindow.global = window.global || {};\nwindow.global.renderReact = renderReact;\nwindow.global.renderAngular = renderAngular;\n\n\n//# sourceURL=webpack:///./src/renderer.js?");
 
 /***/ })
 
